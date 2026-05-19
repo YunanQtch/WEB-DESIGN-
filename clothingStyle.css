@@ -10,6 +10,15 @@ body {
     color: white;
 }
 
+.page-section {
+    display: none;
+}
+
+.active-page {
+    display: block;
+}
+
+/* HOME PAGE */
 .hero {
     width: 100%;
     min-height: 100vh;
@@ -29,7 +38,7 @@ body {
     overflow: hidden;
 }
 
-/* Top navigation bar */
+/* NAVBAR */
 .navbar {
     width: 100%;
     padding: 55px 70px;
@@ -39,14 +48,18 @@ body {
     align-items: center;
 
     position: relative;
-    z-index: 2;
+    z-index: 5;
 }
 
-/* Logo */
 .logo {
+    color: white;
+    text-decoration: none;
+
     font-size: 42px;
     font-weight: 900;
     letter-spacing: 4px;
+
+    transition: all 0.3s ease;
 }
 
 .logo span {
@@ -55,7 +68,11 @@ body {
     margin-left: 5px;
 }
 
-/* Top right buttons */
+.logo:hover {
+    transform: scale(1.04);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.55);
+}
+
 .nav-links {
     display: flex;
     gap: 35px;
@@ -75,7 +92,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Hover effect for top buttons */
 .nav-links a:hover {
     background-color: white;
     color: black;
@@ -85,7 +101,7 @@ body {
     box-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
 }
 
-/* Main content */
+/* HOME CONTENT */
 .content {
     min-height: 60vh;
 
@@ -121,7 +137,7 @@ body {
     color: #f1f1f1;
 }
 
-/* Email notify section */
+/* EMAIL SECTION */
 .notify-box {
     margin-top: 105px;
     width: 350px;
@@ -160,7 +176,6 @@ input::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Email arrow button */
 .arrow-button {
     background: transparent;
     border: none;
@@ -177,7 +192,6 @@ input::placeholder {
     transition: all 0.3s ease;
 }
 
-/* Hover effect for email arrow button */
 .arrow-button:hover {
     background-color: white;
     color: black;
@@ -197,7 +211,7 @@ input::placeholder {
     color: white;
 }
 
-/* Bottom footer */
+/* FOOTER */
 .footer {
     width: 100%;
 
@@ -219,7 +233,94 @@ input::placeholder {
     letter-spacing: 0.5px;
 }
 
-/* About transparent background overlay */
+/* COLLECTION PAGE */
+.collection-page {
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 35%),
+        linear-gradient(135deg, #070707, #151515, #050505);
+
+    color: white;
+}
+
+.collection-navbar {
+    position: sticky;
+    top: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.collection-content {
+    padding: 30px 70px 70px;
+}
+
+.collection-title-box {
+    margin-bottom: 40px;
+}
+
+.collection-title-box h1 {
+    font-size: 64px;
+    letter-spacing: 3px;
+
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.collection-title-box p {
+    margin-top: 12px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.product-card {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+
+    transition: all 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 35px 80px rgba(255, 255, 255, 0.12);
+}
+
+.product-card img {
+    width: 100%;
+    display: block;
+
+    transition: all 0.5s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.02);
+}
+
+/* ABOUT POP OUT */
 .about-overlay {
     width: 100%;
     height: 100vh;
@@ -239,16 +340,14 @@ input::placeholder {
 
     transition: all 0.4s ease;
 
-    z-index: 10;
+    z-index: 20;
 }
 
-/* This class appears when About is clicked */
 .about-overlay.active {
     opacity: 1;
     visibility: visible;
 }
 
-/* About pop-out box */
 .about-box {
     width: 650px;
     max-width: 90%;
@@ -269,9 +368,10 @@ input::placeholder {
     opacity: 0;
 
     transition: all 0.4s ease;
+
+    position: relative;
 }
 
-/* Smooth pop animation */
 .about-overlay.active .about-box {
     transform: scale(1) translateY(0);
     opacity: 1;
@@ -295,7 +395,6 @@ input::placeholder {
     margin-bottom: 18px;
 }
 
-/* Close button inside pop-out box */
 .close-button {
     position: absolute;
     top: 20px;
@@ -324,7 +423,7 @@ input::placeholder {
     transform: rotate(90deg);
 }
 
-/* Tablet screen */
+/* TABLET */
 @media screen and (max-width: 1024px) {
 
     .navbar {
@@ -358,9 +457,17 @@ input::placeholder {
     .footer {
         padding: 0 40px 30px;
     }
+
+    .collection-content {
+        padding: 30px 40px 60px;
+    }
+
+    .collection-title-box h1 {
+        font-size: 48px;
+    }
 }
 
-/* Mobile screen */
+/* MOBILE */
 @media screen and (max-width: 768px) {
 
     .hero {
@@ -422,6 +529,22 @@ input::placeholder {
 
     .footer p {
         font-size: 11px;
+    }
+
+    .collection-content {
+        padding: 25px 20px 50px;
+    }
+
+    .collection-title-box h1 {
+        font-size: 38px;
+    }
+
+    .collection-title-box p {
+        font-size: 14px;
+    }
+
+    .product-card {
+        border-radius: 14px;
     }
 
     .about-box {

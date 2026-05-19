@@ -6,9 +6,61 @@ const message = document.getElementById("message");
 
 const aboutButton = document.getElementById("aboutButton");
 
+const collectionAboutButton = document.getElementById("collectionAboutButton");
+
 const aboutOverlay = document.getElementById("aboutOverlay");
 
 const closeAbout = document.getElementById("closeAbout");
+
+const homePage = document.getElementById("homePage");
+
+const collectionPage = document.getElementById("collectionPage");
+
+const collectionButton = document.getElementById("collectionButton");
+
+const homeButton = document.getElementById("homeButton");
+
+const logoButton = document.getElementById("logoButton");
+
+const collectionHomeButton = document.getElementById("collectionHomeButton");
+
+const collectionLogoButton = document.getElementById("collectionLogoButton");
+
+const collectionTopButton = document.getElementById("collectionTopButton");
+
+function showHomePage() {
+
+    homePage.classList.add("active-page");
+
+    collectionPage.classList.remove("active-page");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function showCollectionPage() {
+
+    collectionPage.classList.add("active-page");
+
+    homePage.classList.remove("active-page");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function openAboutBox() {
+
+    aboutOverlay.classList.add("active");
+}
+
+function closeAboutBox() {
+
+    aboutOverlay.classList.remove("active");
+}
 
 emailForm.addEventListener("submit", function(event) {
 
@@ -26,21 +78,70 @@ emailForm.addEventListener("submit", function(event) {
     emailInput.value = "";
 });
 
+collectionButton.addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    showCollectionPage();
+});
+
+collectionTopButton.addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    showCollectionPage();
+});
+
+homeButton.addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    showHomePage();
+});
+
+logoButton.addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    showHomePage();
+});
+
+collectionHomeButton.addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    showHomePage();
+});
+
+collectionLogoButton.addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    showHomePage();
+});
+
 aboutButton.addEventListener("click", function(event) {
 
     event.preventDefault();
 
-    aboutOverlay.classList.add("active");
+    openAboutBox();
+});
+
+collectionAboutButton.addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    openAboutBox();
 });
 
 closeAbout.addEventListener("click", function() {
 
-    aboutOverlay.classList.remove("active");
+    closeAboutBox();
 });
 
 aboutOverlay.addEventListener("click", function(event) {
 
     if (event.target === aboutOverlay) {
-        aboutOverlay.classList.remove("active");
+        closeAboutBox();
     }
 });

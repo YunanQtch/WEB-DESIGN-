@@ -5,24 +5,25 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>XEYEOL Coming Soon</title>
+    <title>XEYEOL</title>
 
     <link rel="stylesheet" href="clothingStyle.css">
 </head>
 
 <body>
 
-    <div class="hero">
+    <!-- HOME PAGE -->
+    <section class="hero page-section active-page" id="homePage">
 
         <header class="navbar">
 
-            <div class="logo">
+            <a href="#" class="logo" id="logoButton">
                 XEYEOL<span>™</span>
-            </div>
+            </a>
 
             <nav class="nav-links">
-                <a href="#">HOME</a>
-                <a href="#">COLLECTION</a>
+                <a href="#" id="homeButton">HOME</a>
+                <a href="#" id="collectionButton">COLLECTION</a>
                 <a href="#" id="aboutButton">ABOUT</a>
                 <a href="#">CONTACT</a>
             </nav>
@@ -61,9 +62,52 @@
 
         </footer>
 
-    </div>
+    </section>
 
-    <!-- About pop-out box -->
+
+    <!-- COLLECTION PAGE -->
+    <section class="collection-page page-section" id="collectionPage">
+
+        <header class="navbar collection-navbar">
+
+            <a href="#" class="logo" id="collectionLogoButton">
+                XEYEOL<span>™</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#" id="collectionHomeButton">HOME</a>
+                <a href="#" id="collectionTopButton">COLLECTION</a>
+                <a href="#" id="collectionAboutButton">ABOUT</a>
+                <a href="#">CONTACT</a>
+            </nav>
+
+        </header>
+
+        <div class="collection-content">
+
+            <div class="collection-title-box">
+                <h1>XEYEOL COLLECTION</h1>
+                <p>Launching soon — explore the first visual direction of XEYEOL streetwear.</p>
+            </div>
+
+            <div class="product-gallery">
+
+                <div class="product-card">
+                    <img src="Collection1.png" alt="XEYEOL product collection one">
+                </div>
+
+                <div class="product-card">
+                    <img src="Collection2.png" alt="XEYEOL product collection two">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT POP OUT BOX -->
     <div class="about-overlay" id="aboutOverlay">
 
         <div class="about-box">
