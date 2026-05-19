@@ -423,6 +423,43 @@ input::placeholder {
     transform: rotate(90deg);
 }
 
+/* MUSIC BUTTON */
+.music-button {
+    position: fixed;
+    bottom: 28px;
+    left: 28px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 0 22px rgba(255, 255, 255, 0.12);
+
+    z-index: 100;
+
+    transition: all 0.3s ease;
+}
+
+.music-button:hover {
+    background: white;
+    color: black;
+
+    transform: scale(1.1);
+
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.45);
+}
+
 /* TABLET */
 @media screen and (max-width: 1024px) {
 
@@ -558,5 +595,15 @@ input::placeholder {
     .about-box p {
         font-size: 14px;
         line-height: 1.7;
+    }
+
+    .music-button {
+        bottom: 20px;
+        left: 20px;
+
+        width: 44px;
+        height: 44px;
+
+        font-size: 18px;
     }
 }

@@ -28,6 +28,12 @@ const collectionLogoButton = document.getElementById("collectionLogoButton");
 
 const collectionTopButton = document.getElementById("collectionTopButton");
 
+const backgroundMusic = document.getElementById("backgroundMusic");
+
+const musicButton = document.getElementById("musicButton");
+
+let musicPlaying = false;
+
 function showHomePage() {
 
     homePage.classList.add("active-page");
@@ -143,5 +149,27 @@ aboutOverlay.addEventListener("click", function(event) {
 
     if (event.target === aboutOverlay) {
         closeAboutBox();
+    }
+});
+
+musicButton.addEventListener("click", function() {
+
+    if (musicPlaying === false) {
+
+        backgroundMusic.play();
+
+        backgroundMusic.volume = 0.35;
+
+        musicButton.textContent = "🔊";
+
+        musicPlaying = true;
+
+    } else {
+
+        backgroundMusic.pause();
+
+        musicButton.textContent = "🔇";
+
+        musicPlaying = false;
     }
 });
