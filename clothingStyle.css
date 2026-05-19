@@ -55,7 +55,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 55px;
+    gap: 45px;
 }
 
 .nav-links a {
@@ -63,11 +63,18 @@ body {
     text-decoration: none;
     font-size: 13px;
     letter-spacing: 1px;
-    transition: 0.3s ease;
+
+    padding: 10px 16px;
+    border-radius: 25px;
+
+    transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #c7c7c7;
+    background-color: white;
+    color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
 }
 
 .content {
@@ -144,11 +151,17 @@ button {
     font-size: 28px;
     cursor: pointer;
 
-    padding-bottom: 6px;
+    padding: 6px 12px;
+    border-radius: 50%;
+
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    color: #cccccc;
+    background-color: white;
+    color: black;
+    transform: translateX(6px) scale(1.1);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
 }
 
 #message {
@@ -181,29 +194,26 @@ button:hover {
 
 .footer-links {
     display: flex;
-    gap: 60px;
+    gap: 45px;
 }
 
-.footer-links a,
-.socials a {
+.footer-links a {
     color: white;
     text-decoration: none;
     font-size: 14px;
     letter-spacing: 1px;
+
+    padding: 9px 15px;
+    border-radius: 25px;
+
+    transition: all 0.3s ease;
 }
 
-.socials {
-    display: flex;
-    gap: 25px;
-}
-
-.socials a {
-    font-size: 22px;
-}
-
-.footer-links a:hover,
-.socials a:hover {
-    color: #c7c7c7;
+.footer-links a:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
 }
 
 /* Tablet screen */
@@ -218,7 +228,7 @@ button:hover {
     }
 
     .nav-links {
-        gap: 25px;
+        gap: 20px;
     }
 
     .content {
@@ -238,7 +248,7 @@ button:hover {
     }
 
     .footer-links {
-        gap: 30px;
+        gap: 25px;
     }
 }
 
@@ -261,12 +271,13 @@ button:hover {
     }
 
     .nav-links {
-        gap: 20px;
+        gap: 15px;
         flex-wrap: wrap;
     }
 
     .nav-links a {
         font-size: 12px;
+        padding: 8px 12px;
     }
 
     .content {
@@ -302,7 +313,12 @@ button:hover {
     }
 
     .footer-links {
-        gap: 25px;
+        gap: 15px;
         flex-wrap: wrap;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+        padding: 8px 12px;
     }
 }
