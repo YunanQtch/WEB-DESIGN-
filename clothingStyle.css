@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: white;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("Images/Background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    padding: 55px 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    font-size: 18px;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 55px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c7c7c7;
+}
+
+.content {
+    min-height: 60vh;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 70px;
+    position: relative;
+    z-index: 2;
+}
+
+.left-content {
+    margin-top: 60px;
+}
+
+.left-content h1 {
+    font-size: 88px;
+    line-height: 0.9;
+    font-weight: 900;
+    letter-spacing: 3px;
+
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.subtitle {
+    margin-top: 20px;
+    font-size: 27px;
+    letter-spacing: 1px;
+    color: #f1f1f1;
+}
+
+.notify-box {
+    margin-top: 105px;
+    width: 350px;
+}
+
+.notify-box p {
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+    padding: 10px 0;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: white;
+
+    font-size: 28px;
+    cursor: pointer;
+
+    padding-bottom: 6px;
+}
+
+button:hover {
+    color: #cccccc;
+}
+
+#message {
+    display: block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: white;
+}
+
+.footer {
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    padding: 0 70px 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 2;
+}
+
+.footer p {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-links a,
+.socials a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.socials {
+    display: flex;
+    gap: 25px;
+}
+
+.socials a {
+    font-size: 22px;
+}
+
+.footer-links a:hover,
+.socials a:hover {
+    color: #c7c7c7;
+}
+
+/* Tablet screen */
+@media screen and (max-width: 1024px) {
+
+    .navbar {
+        padding: 35px 40px;
+    }
+
+    .logo {
+        font-size: 34px;
+    }
+
+    .nav-links {
+        gap: 25px;
+    }
+
+    .content {
+        padding-left: 40px;
+    }
+
+    .left-content h1 {
+        font-size: 65px;
+    }
+
+    .subtitle {
+        font-size: 22px;
+    }
+
+    .footer {
+        padding: 0 40px 30px;
+    }
+
+    .footer-links {
+        gap: 30px;
+    }
+}
+
+/* Mobile screen */
+@media screen and (max-width: 768px) {
+
+    .hero {
+        background-position: center;
+    }
+
+    .navbar {
+        padding: 30px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .content {
+        padding: 40px 25px;
+        align-items: flex-start;
+    }
+
+    .left-content {
+        margin-top: 60px;
+    }
+
+    .left-content h1 {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .notify-box {
+        margin-top: 70px;
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .footer {
+        position: relative;
+        padding: 40px 25px 25px;
+
+        flex-direction: column;
+        gap: 25px;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+}
