@@ -28,6 +28,14 @@ const collectionLogoButton = document.getElementById("collectionLogoButton");
 
 const collectionTopButton = document.getElementById("collectionTopButton");
 
+const imagePreviewOverlay = document.getElementById("imagePreviewOverlay");
+
+const fullscreenImage = document.getElementById("fullscreenImage");
+
+const imageCloseButton = document.getElementById("imageCloseButton");
+
+const zoomImages = document.querySelectorAll(".zoom-image");
+
 function showHomePage() {
 
     homePage.classList.add("active-page");
@@ -60,6 +68,22 @@ function openAboutBox() {
 function closeAboutBox() {
 
     aboutOverlay.classList.remove("active");
+}
+
+function openImagePreview(imageSource) {
+
+    fullscreenImage.src = imageSource;
+
+    imagePreviewOverlay.classList.add("active");
+}
+
+function closeImagePreview() {
+
+    imagePreviewOverlay.classList.remove("active");
+
+    setTimeout(function() {
+        fullscreenImage.src = "";
+    }, 400);
 }
 
 emailForm.addEventListener("submit", function(event) {
@@ -143,5 +167,25 @@ aboutOverlay.addEventListener("click", function(event) {
 
     if (event.target === aboutOverlay) {
         closeAboutBox();
+    }
+});
+
+zoomImages.forEach(function(image) {
+
+    image.addEventListener("click", function() {
+
+        openImagePreview(image.src);
+    });
+});
+
+imageCloseButton.addEventListener("click", function() {
+
+    closeImagePreview();
+});
+
+imagePreviewOverlay.addEventListener("click", function(event) {
+
+    if (event.target === imagePreviewOverlay || event.target === fullscreenImage) {
+        closeImagePreview();
     }
 });
