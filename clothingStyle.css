@@ -219,6 +219,111 @@ input::placeholder {
     letter-spacing: 0.5px;
 }
 
+/* About transparent background overlay */
+.about-overlay {
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.4s ease;
+
+    z-index: 10;
+}
+
+/* This class appears when About is clicked */
+.about-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* About pop-out box */
+.about-box {
+    width: 650px;
+    max-width: 90%;
+
+    padding: 45px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 25px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+
+    transform: scale(0.75) translateY(40px);
+    opacity: 0;
+
+    transition: all 0.4s ease;
+}
+
+/* Smooth pop animation */
+.about-overlay.active .about-box {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.about-box h2 {
+    font-size: 32px;
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.about-box p {
+    font-size: 15px;
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    margin-bottom: 18px;
+}
+
+/* Close button inside pop-out box */
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+
+    font-size: 32px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.close-button:hover {
+    color: black;
+    background-color: white;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    transform: rotate(90deg);
+}
+
 /* Tablet screen */
 @media screen and (max-width: 1024px) {
 
@@ -317,5 +422,18 @@ input::placeholder {
 
     .footer p {
         font-size: 11px;
+    }
+
+    .about-box {
+        padding: 35px 25px;
+    }
+
+    .about-box h2 {
+        font-size: 26px;
+    }
+
+    .about-box p {
+        font-size: 14px;
+        line-height: 1.7;
     }
 }
