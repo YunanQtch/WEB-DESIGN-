@@ -10,14 +10,6 @@ body {
     color: white;
 }
 
-.page-section {
-    display: none;
-}
-
-.active-page {
-    display: block;
-}
-
 /* HOME PAGE */
 .hero {
     width: 100%;

@@ -16,6 +16,7 @@ const musicButton = document.getElementById("musicButton");
 
 let musicPlaying = false;
 
+/* EMAIL FORM */
 if (emailForm) {
 
     emailForm.addEventListener("submit", function(event) {
@@ -35,7 +36,8 @@ if (emailForm) {
     });
 }
 
-if (aboutButton) {
+/* ABOUT BUTTON */
+if (aboutButton && aboutOverlay) {
 
     aboutButton.addEventListener("click", function(event) {
 
@@ -45,7 +47,8 @@ if (aboutButton) {
     });
 }
 
-if (closeAbout) {
+/* CLOSE ABOUT BUTTON */
+if (closeAbout && aboutOverlay) {
 
     closeAbout.addEventListener("click", function() {
 
@@ -53,6 +56,7 @@ if (closeAbout) {
     });
 }
 
+/* CLOSE ABOUT WHEN CLICKING OUTSIDE THE BOX */
 if (aboutOverlay) {
 
     aboutOverlay.addEventListener("click", function(event) {
@@ -63,19 +67,30 @@ if (aboutOverlay) {
     });
 }
 
-if (musicButton) {
+/* MUSIC BUTTON */
+if (musicButton && backgroundMusic) {
+
+    backgroundMusic.volume = 0.35;
 
     musicButton.addEventListener("click", function() {
 
         if (musicPlaying === false) {
 
-            backgroundMusic.play();
+            backgroundMusic.muted = false;
 
-            backgroundMusic.volume = 0.35;
+            backgroundMusic.play()
+                .then(function() {
 
-            musicButton.textContent = "🔊";
+                    musicButton.textContent = "🔊";
 
-            musicPlaying = true;
+                    musicPlaying = true;
+                })
+                .catch(function(error) {
+
+                    console.log("Music could not play:", error);
+
+                    alert("Music could not play. Please check that music.mp3 is uploaded correctly.");
+                });
 
         } else {
 
