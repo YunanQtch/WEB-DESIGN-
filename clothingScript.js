@@ -6,27 +6,9 @@ const message = document.getElementById("message");
 
 const aboutButton = document.getElementById("aboutButton");
 
-const collectionAboutButton = document.getElementById("collectionAboutButton");
-
 const aboutOverlay = document.getElementById("aboutOverlay");
 
 const closeAbout = document.getElementById("closeAbout");
-
-const homePage = document.getElementById("homePage");
-
-const collectionPage = document.getElementById("collectionPage");
-
-const collectionButton = document.getElementById("collectionButton");
-
-const homeButton = document.getElementById("homeButton");
-
-const logoButton = document.getElementById("logoButton");
-
-const collectionHomeButton = document.getElementById("collectionHomeButton");
-
-const collectionLogoButton = document.getElementById("collectionLogoButton");
-
-const collectionTopButton = document.getElementById("collectionTopButton");
 
 const backgroundMusic = document.getElementById("backgroundMusic");
 
@@ -34,142 +16,74 @@ const musicButton = document.getElementById("musicButton");
 
 let musicPlaying = false;
 
-function showHomePage() {
+if (emailForm) {
 
-    homePage.classList.add("active-page");
+    emailForm.addEventListener("submit", function(event) {
 
-    collectionPage.classList.remove("active-page");
+        event.preventDefault();
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+        const email = emailInput.value.trim();
+
+        if (email === "") {
+            message.textContent = "Please enter your email address.";
+            return;
+        }
+
+        message.textContent = "Thank you. We will notify you when we launch.";
+
+        emailInput.value = "";
     });
 }
 
-function showCollectionPage() {
+if (aboutButton) {
 
-    collectionPage.classList.add("active-page");
+    aboutButton.addEventListener("click", function(event) {
 
-    homePage.classList.remove("active-page");
+        event.preventDefault();
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+        aboutOverlay.classList.add("active");
     });
 }
 
-function openAboutBox() {
+if (closeAbout) {
 
-    aboutOverlay.classList.add("active");
+    closeAbout.addEventListener("click", function() {
+
+        aboutOverlay.classList.remove("active");
+    });
 }
 
-function closeAboutBox() {
+if (aboutOverlay) {
 
-    aboutOverlay.classList.remove("active");
+    aboutOverlay.addEventListener("click", function(event) {
+
+        if (event.target === aboutOverlay) {
+            aboutOverlay.classList.remove("active");
+        }
+    });
 }
 
-emailForm.addEventListener("submit", function(event) {
+if (musicButton) {
 
-    event.preventDefault();
+    musicButton.addEventListener("click", function() {
 
-    const email = emailInput.value.trim();
+        if (musicPlaying === false) {
 
-    if (email === "") {
-        message.textContent = "Please enter your email address.";
-        return;
-    }
+            backgroundMusic.play();
 
-    message.textContent = "Thank you. We will notify you when we launch.";
+            backgroundMusic.volume = 0.35;
 
-    emailInput.value = "";
-});
+            musicButton.textContent = "🔊";
 
-collectionButton.addEventListener("click", function(event) {
+            musicPlaying = true;
 
-    event.preventDefault();
+        } else {
 
-    showCollectionPage();
-});
+            backgroundMusic.pause();
 
-collectionTopButton.addEventListener("click", function(event) {
+            musicButton.textContent = "🔇";
 
-    event.preventDefault();
-
-    showCollectionPage();
-});
-
-homeButton.addEventListener("click", function(event) {
-
-    event.preventDefault();
-
-    showHomePage();
-});
-
-logoButton.addEventListener("click", function(event) {
-
-    event.preventDefault();
-
-    showHomePage();
-});
-
-collectionHomeButton.addEventListener("click", function(event) {
-
-    event.preventDefault();
-
-    showHomePage();
-});
-
-collectionLogoButton.addEventListener("click", function(event) {
-
-    event.preventDefault();
-
-    showHomePage();
-});
-
-aboutButton.addEventListener("click", function(event) {
-
-    event.preventDefault();
-
-    openAboutBox();
-});
-
-collectionAboutButton.addEventListener("click", function(event) {
-
-    event.preventDefault();
-
-    openAboutBox();
-});
-
-closeAbout.addEventListener("click", function() {
-
-    closeAboutBox();
-});
-
-aboutOverlay.addEventListener("click", function(event) {
-
-    if (event.target === aboutOverlay) {
-        closeAboutBox();
-    }
-});
-
-musicButton.addEventListener("click", function() {
-
-    if (musicPlaying === false) {
-
-        backgroundMusic.play();
-
-        backgroundMusic.volume = 0.35;
-
-        musicButton.textContent = "🔊";
-
-        musicPlaying = true;
-
-    } else {
-
-        backgroundMusic.pause();
-
-        musicButton.textContent = "🔇";
-
-        musicPlaying = false;
-    }
-});
+            musicPlaying = false;
+        }
+    });
+}
