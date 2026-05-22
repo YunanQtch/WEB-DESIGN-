@@ -420,33 +420,47 @@ input::placeholder {
     transform: translateY(-3px);
 }
 
-/* X CLOSE BUTTON */
+/* ANIMATED X CLOSE BUTTON */
 .close-button {
     position: absolute;
-    top: 20px;
-    right: 25px;
+    top: 18px;
+    right: 22px;
 
-    background: transparent;
-    border: none;
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
 
     color: white;
 
-    font-size: 32px;
+    font-size: 30px;
+    line-height: 1;
+
     cursor: pointer;
 
-    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition: all 0.35s ease;
 }
 
 .close-button:hover {
+    background: white;
     color: black;
-    background-color: white;
 
-    width: 40px;
-    height: 40px;
+    transform: rotate(90deg) scale(1.12);
 
-    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.55);
+}
 
-    transform: rotate(90deg);
+.close-button:active {
+    transform: rotate(90deg) scale(0.95);
 }
 
 /* MUSIC BUTTON */
