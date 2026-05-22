@@ -151,6 +151,12 @@ form {
     border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
 
+/* ACCESSIBILITY LABEL */
+.email-label {
+    position: absolute;
+    left: -9999px;
+}
+
 input {
     flex: 1;
 
@@ -315,8 +321,9 @@ input::placeholder {
     transform: scale(1.02);
 }
 
-/* ABOUT POP OUT */
-.about-overlay {
+/* ABOUT AND CONTACT POP OUT */
+.about-overlay,
+.contact-overlay {
     width: 100%;
     height: 100vh;
 
@@ -338,12 +345,14 @@ input::placeholder {
     z-index: 20;
 }
 
-.about-overlay.active {
+.about-overlay.active,
+.contact-overlay.active {
     opacity: 1;
     visibility: visible;
 }
 
-.about-box {
+.about-box,
+.contact-box {
     width: 650px;
     max-width: 90%;
 
@@ -367,12 +376,14 @@ input::placeholder {
     position: relative;
 }
 
-.about-overlay.active .about-box {
+.about-overlay.active .about-box,
+.contact-overlay.active .contact-box {
     transform: scale(1) translateY(0);
     opacity: 1;
 }
 
-.about-box h2 {
+.about-box h2,
+.contact-box h2 {
     font-size: 32px;
     letter-spacing: 2px;
 
@@ -381,13 +392,44 @@ input::placeholder {
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-.about-box p {
+.about-box p,
+.contact-box p {
     font-size: 15px;
     line-height: 1.8;
 
     color: rgba(255, 255, 255, 0.9);
 
     margin-bottom: 18px;
+}
+
+.contact-email {
+    display: inline-block;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 18px;
+    letter-spacing: 1px;
+
+    padding: 12px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 25px;
+
+    transition: all 0.3s ease;
+}
+
+.contact-email:hover {
+    background: white;
+    color: black;
+
+    transform: translateY(-3px);
+}
+
+.contact-note {
+    margin-top: 18px;
+    font-size: 13px;
+    opacity: 0.75;
 }
 
 .close-button {
@@ -579,15 +621,18 @@ input::placeholder {
         border-radius: 14px;
     }
 
-    .about-box {
+    .about-box,
+    .contact-box {
         padding: 35px 25px;
     }
 
-    .about-box h2 {
+    .about-box h2,
+    .contact-box h2 {
         font-size: 26px;
     }
 
-    .about-box p {
+    .about-box p,
+    .contact-box p {
         font-size: 14px;
         line-height: 1.7;
     }

@@ -10,14 +10,20 @@ const aboutOverlay = document.getElementById("aboutOverlay");
 
 const closeAbout = document.getElementById("closeAbout");
 
+const contactButton = document.getElementById("contactButton");
+
+const contactOverlay = document.getElementById("contactOverlay");
+
+const closeContact = document.getElementById("closeContact");
+
 const backgroundMusic = document.getElementById("backgroundMusic");
 
 const musicButton = document.getElementById("musicButton");
 
 let musicPlaying = false;
 
-/* EMAIL FORM */
-if (emailForm) {
+/* EMAIL FORM VALIDATION */
+if (emailForm && emailInput && message) {
 
     emailForm.addEventListener("submit", function(event) {
 
@@ -26,7 +32,9 @@ if (emailForm) {
         const email = emailInput.value.trim();
 
         if (email === "") {
+
             message.textContent = "Please enter your email address.";
+
             return;
         }
 
@@ -36,7 +44,7 @@ if (emailForm) {
     });
 }
 
-/* ABOUT BUTTON */
+/* ABOUT POP OUT */
 if (aboutButton && aboutOverlay) {
 
     aboutButton.addEventListener("click", function(event) {
@@ -47,7 +55,6 @@ if (aboutButton && aboutOverlay) {
     });
 }
 
-/* CLOSE ABOUT BUTTON */
 if (closeAbout && aboutOverlay) {
 
     closeAbout.addEventListener("click", function() {
@@ -56,13 +63,43 @@ if (closeAbout && aboutOverlay) {
     });
 }
 
-/* CLOSE ABOUT WHEN CLICKING OUTSIDE THE BOX */
 if (aboutOverlay) {
 
     aboutOverlay.addEventListener("click", function(event) {
 
         if (event.target === aboutOverlay) {
+
             aboutOverlay.classList.remove("active");
+        }
+    });
+}
+
+/* CONTACT POP OUT */
+if (contactButton && contactOverlay) {
+
+    contactButton.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        contactOverlay.classList.add("active");
+    });
+}
+
+if (closeContact && contactOverlay) {
+
+    closeContact.addEventListener("click", function() {
+
+        contactOverlay.classList.remove("active");
+    });
+}
+
+if (contactOverlay) {
+
+    contactOverlay.addEventListener("click", function(event) {
+
+        if (event.target === contactOverlay) {
+
+            contactOverlay.classList.remove("active");
         }
     });
 }
