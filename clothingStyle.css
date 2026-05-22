@@ -420,42 +420,33 @@ input::placeholder {
     transform: translateY(-3px);
 }
 
-.contact-note {
-    margin-top: 18px;
-
-    font-size: 13px;
-
-    opacity: 0.75;
-}
-
-/* POP UP CLOSE BUTTON */
-.popup-button {
-    margin-top: 18px;
+/* X CLOSE BUTTON */
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 25px;
 
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.45);
+    border: none;
 
     color: white;
 
-    padding: 12px 22px;
-
-    border-radius: 25px;
-
-    font-size: 13px;
-    letter-spacing: 1px;
-
+    font-size: 32px;
     cursor: pointer;
 
     transition: all 0.3s ease;
 }
 
-.popup-button:hover {
-    background: white;
+.close-button:hover {
     color: black;
+    background-color: white;
 
-    transform: translateY(-3px);
+    width: 40px;
+    height: 40px;
 
-    box-shadow: 0 0 18px rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+    transform: rotate(90deg);
 }
 
 /* MUSIC BUTTON */
