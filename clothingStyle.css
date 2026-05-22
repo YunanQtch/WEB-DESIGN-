@@ -1,394 +1,394 @@
+/* every elements in the page selected */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;/* default outer spacing is removed */
+    padding: 0;/* defauly inner spacing is removed */
+    box-sizing: border-box;/* padding and border included inside element sizev */
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #000;
-    color: white;
+body {/* helps style the whole page body */
+    font-family: Arial, Helvetica, sans-serif;/* main font */
+    background-color: #000;/* background set to black */
+    color: white;/* default text colour as white  */
 }
 
-/* HOME PAGE */
+/* Home page */
 .hero {
-    width: 100%;
-    min-height: 100vh;
+    width: 100%;/* full width of the section */
+    min-height: 100vh;/* full screen height */
 
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.55)
+    background-image:/* background layer added */
+        linear-gradient(/* dark overlay */
+            rgba(0, 0, 0, 0.35),/* top overlay colour */
+            rgba(0, 0, 0, 0.55)/* bottom overlay colour */
         ),
-        url("background.png");
+        url("background.png");/* adds the background image */
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: cover;/* screen covered by the image */
+    background-position: center;/* background image centered */
+    background-repeat: no-repeat;/* image repeating stopped */
 
-    position: relative;
-    overflow: hidden;
+    position: relative;/* absolute elements allowed inside */
+    overflow: hidden;/* hides anything outside section */
 }
 
-/* NAVIGATION BAR */
+/* Navigation bar */
 .navbar {
-    width: 100%;
-    padding: 55px 70px;
+    width: 100%;/* navigation bar full width */
+    padding: 54px 69px;/* adds spacing inside the navigation bar */
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex;/* flexbox layout used */
+    justify-content: space-between;/* puts the logo to the left and the menu to the right side */
+    align-items: center;/* items are centered vertically */
 
-    position: relative;
-    z-index: 5;
+    position: relative;/* keeps navigation bar layered properly */
+    z-index: 5;/* navigation bar placed above the background */
 }
 
-/* BRAND LOGO */
+/* Brand logo */
 .logo {
     color: white;
-    text-decoration: none;
+    text-decoration: none;/* removed the underline */
 
-    font-size: 42px;
-    font-weight: 900;
+    font-size: 40px;
+    font-weight: 950;/*makes the logo bold */
     letter-spacing: 4px;
 
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;/* smooth over animation */
 }
 
-.logo span {
-    font-size: 18px;
-    vertical-align: top;
-    margin-left: 5px;
+.logo span {/* trade mark symbol */
+    font-size: 19px;
+    vertical-align: top;/* moves it to the top */
+    margin-left: 5px;/* adds space beside logo */
 }
 
-.logo:hover {
-    transform: scale(1.04);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.55);
+.logo:hover {/* adds the hover effect to the logo */
+    transform: scale(1.04);/* makes the logo big by a little */
+    text-shadow: 0 0 25px rgba(236, 173, 173, 0.55);/* adds the glowy effect */
 }
 
 /* TOP BUTTONS */
 .nav-links {
-    display: flex;
-    gap: 35px;
-    align-items: center;
+    display: flex;/* places the links in a row */
+    gap: 36px;/* adds space between links */
+    align-items: center;/* vertically centers links */
 }
 
 .nav-links a {
     color: white;
-    text-decoration: none;
+    text-decoration: none;/* removes underline */
 
     font-size: 13px;
     letter-spacing: 1px;
 
-    padding: 10px 16px;
-    border-radius: 25px;
+    padding: 10px 16px;/* adds clickable space */
+    border-radius: 25px;/* makes the button shape round */
 
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;/* hover effect smooth */
 }
 
-.nav-links a:hover {
+.nav-links a:hover {/* menu link hover  */
     background-color: white;
     color: black;
 
-    transform: translateY(-3px);
+    transform: translateY(-3px);/* moves link slightly upward */
 
-    box-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.45);/* glow shadow effect added */
 }
 
-/* HOME CONTENT */
-.content {
-    min-height: 60vh;
+/* Home content */
+.content {/* for styling homepage content area */
+    min-height: 60vh;/* gives content height */
 
-    display: flex;
-    align-items: center;
+    display: flex;/* flexbox used */
+    align-items: center;/* centers the content vertically */
 
-    padding-left: 70px;
+    padding-left: 70px;/* moves content from left edge */
 
-    position: relative;
-    z-index: 2;
+    position: relative;/* keeps content above the background */
+    z-index: 2;/* places content above the background */
 }
 
-.left-content {
-    margin-top: 60px;
+.left-content {/* styles left side texts  */
+    margin-top: 60px;/* adds top spacing  */
 }
 
-.left-content h1 {
-    font-size: 88px;
+.left-content h1 {/* styles the main heading */
+    font-size: 87px;/* makes heading large */
     line-height: 0.9;
 
-    font-weight: 900;
-    letter-spacing: 3px;
+    font-weight: 900;/* makes the heading bold */
+    letter-spacing: 3px;/* addes spacing between letters */
 
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-.subtitle {
-    margin-top: 20px;
+.subtitle {/* styles the subtitle texts */
+    margin-top: 20px;/* adds space above the subtitle */
 
     font-size: 27px;
     letter-spacing: 1px;
 
-    color: #f1f1f1;
+    color: #f1f1f1;/* sets the colour as light grey  */
 }
 
 /* EMAIL SECTION */
-.notify-box {
-    margin-top: 105px;
+.notify-box {/* styles email notification box */
+    margin-top: 105px;/*  */
     width: 350px;
 }
 
-.notify-box p {
+.notify-box p {/* styles the notification text */
     font-size: 13px;
     letter-spacing: 1px;
 
-    margin-bottom: 20px;
+    margin-bottom: 20px;/* adds space below the text */
 }
 
-form {
-    display: flex;
-    align-items: center;
+form {/* styles the email form */
+    display: flex;/* input and button are placed in a row */
+    align-items: center;/* vertically centered */
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);/* adds the bottom line */
 }
 
-input {
-    flex: 1;
+input {/* styles input field */
+    flex: 1;/* makes input take available space */
 
-    background: transparent;
-    border: none;
-    outline: none;
+    background: transparent;/* removes the input background */
+    border: none;/* removes the border */
+    outline: none;/* removes focus outlines */
 
-    color: white;
+    color: white;/* the typed text becomes white */
 
-    padding: 10px 0;
+    padding: 10px 0;/* vertical spacing added */
 
-    font-size: 14px;
-    letter-spacing: 1px;
+    font-size: 14px;/* sets input text size */
+    letter-spacing: 1px;/* adds letter spacing */
 }
 
-input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+input::placeholder {/* styles email arrow button */
+    color: rgba(255, 255, 255, 0.7);/* makes placeholder light white  */
 }
 
-/* EMAIL ARROW BUTTON */
+/* email arrow button */
 .arrow-button {
-    background: transparent;
-    border: none;
+    background: transparent;/* removes background */
+    border: none;/* removes the border */
 
-    color: white;
+    color: white;/* makes arrow white */
 
-    font-size: 28px;
+    font-size: 28px;/* sets arrow size */
 
-    cursor: pointer;
+    cursor: pointer;/* shows pointer cursor */
 
-    padding: 6px 12px;
-    border-radius: 50%;
+    padding: 6px 12px;/* button spacing added */
+    border-radius: 50%;/* makes button round */
 
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;/* smooth hover effect added */
 }
 
-.arrow-button:hover {
+.arrow-button:hover {/* styles arrow hover */
     background-color: white;
-    color: black;
+    color: black;/* makes the arrow black */
 
-    transform: translateX(6px) scale(1.1);
+    transform: translateX(6px) scale(1.1);/* moves and enlarges the arrow */
 
-    box-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.45);/* adds the glow effect */
 }
 
-#message {
-    display: block;
+#message {/* styles form message */
+    display: block;/* message appear on new line */
 
-    margin-top: 12px;
+    margin-top: 12px;/* adds space above message */
 
-    font-size: 13px;
+    font-size: 13px;/* message size set */
 
-    color: white;
+    color: white;/* message set to white colour */
 }
 
-/* FOOTER */
+/* Footer */
 .footer {
-    width: 100%;
+    width: 100%;/* makes full width of a footer */
 
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: absolute;/* places footer inside */
+    bottom: 0;/* moves footer to bottom */
+    left: 0;/* aligns footer to left */
 
-    padding: 0 70px 35px;
+    padding: 0 70px 35px;/* adds footer spacing  */
 
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    display: flex;/* uses flexbox */
+    justify-content: flex-start;/* aligns text to the left side */
+    align-items: center;/* centers footer vertically */
 
-    z-index: 2;
+    z-index: 2;/* keeps the footer above background */
 }
 
-.footer p {
+.footer p {/* styles footer text */
     font-size: 12px;
     letter-spacing: 0.5px;
 }
 
-/* COLLECTION PAGE */
+/* Collection page */
 .collection-page {
     width: 100%;
     min-height: 100vh;
 
     background:
         radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 35%),
-        linear-gradient(135deg, #070707, #151515, #050505);
+        linear-gradient(135deg, #070707, #151515, #050505);/* adds the dark gradient */
 
-    color: white;
+    color: white;/* sets text colour */
 }
 
-.collection-navbar {
-    position: sticky;
-    top: 0;
+.collection-navbar {/* styles collection page navigation bar */
+    position: sticky;/* keeps navigation at top while scrolling */
+    top: 0;/* sticks the navigation bar to the top */
 
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.45);/* adds the transparent black background */
 
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);/* add blur effect */
+    -webkit-backdrop-filter: blur(14px);/* safari blur support */
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);/* adds subtle bottom border */
 }
 
-.collection-content {
+.collection-content {/* styles scollection content area */
     padding: 30px 70px 70px;
 }
 
-.collection-title-box {
+.collection-title-box {/* styles the title box */
     margin-bottom: 40px;
 }
 
-.collection-title-box h1 {
+.collection-title-box h1 {/* styles the collection heading */
     font-size: 64px;
     letter-spacing: 3px;
 
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-.collection-title-box p {
-    margin-top: 12px;
+.collection-title-box p {/* styles collection description */
+    margin-top: 12px;/* adds space above the paragraph */
 
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.75);/* makes text softer */
 
     font-size: 16px;
     letter-spacing: 1px;
 }
 
-.product-gallery {
+.product-gallery {/* styles the product gallery */
     display: flex;
-    flex-direction: column;
-    gap: 35px;
+    flex-direction: column;/* stacks the products vertically */
+    gap: 35px;/* adds gap between products */
 }
 
-.product-card {
+.product-card {/* styles each of the product card */
     width: 100%;
 
-    overflow: hidden;
+    overflow: hidden;/* hides the image overflow */
 
-    border-radius: 22px;
+    border-radius: 22px;/* makes the card corners round */
 
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.08);/* makes the background transparent */
 
-    border: 1px solid rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.16);/* adds subtle border */
 
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);/* adds the shadow */
 
-    transition: all 0.4s ease;
+    transition: all 0.4s ease;/* smooth hover effect */
 }
 
-.product-card:hover {
-    transform: translateY(-8px);
+.product-card:hover {/* styles the product card hover */
+    transform: translateY(-8px);/* moves the card upward */
 
-    box-shadow: 0 35px 80px rgba(255, 255, 255, 0.12);
+    box-shadow: 0 35px 80px rgba(255, 255, 255, 0.12);/* brighter shadow added */
 }
 
-.product-card img {
+.product-card img {/* styles the product image */
     width: 100%;
     display: block;
 
-    transition: all 0.5s ease;
+    transition: all 0.5s ease;/* smooth image hover */
 }
 
-.product-card:hover img {
-    transform: scale(1.02);
+.product-card:hover img {/* styles image hover added */
+    transform: scale(1.02);/* adds slight image zoom */
 }
 
-/* ABOUT AND CONTACT POP OUT */
+/* about and contact popout */
 .about-overlay,
-.contact-overlay {
+.contact-overlay {/* styles both the popup overlays */
     width: 100%;
     height: 100vh;
 
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: fixed;/* keeps overlay fixed on the screen  */
+    top: 0;/* starts from the top */
+    left: 0;/* starts from the left */
 
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.45);/* adds dark transparent background */
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    opacity: 0;
-    visibility: hidden;
+    opacity: 0;/* hides overlay */
+    visibility: hidden;/* prevents the clicks when hidden */
 
-    transition: all 0.4s ease;
+    transition: all 0.4s ease;/* smooth open and close */
 
-    z-index: 20;
+    z-index: 20;/* places overlay above the page */
 }
 
 .about-overlay.active,
-.contact-overlay.active {
-    opacity: 1;
-    visibility: visible;
+.contact-overlay.active {/* when active overlay shows up */
+    opacity: 1;/* overlay visible */
+    visibility: visible;/* overlay able to be seen and clicked */
 }
 
 .about-box,
-.contact-box {
-    width: 650px;
-    max-width: 90%;
+.contact-box {/* styles pop up boxes */
+    width: 650px;/* sets box width  */
+    max-width: 90%;/* keeps box responsive */
+    padding: 45px;/* adds the inside spacing */
 
-    padding: 45px;
+    background: rgba(255, 255, 255, 0.12);/* adds transparent glass background */
 
-    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.35);/* adds the light border */
+    border-radius: 25px;/* rounds popup corners */
 
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    border-radius: 25px;
+    backdrop-filter: blur(14px);/* adds the glass blur effect */
+    -webkit-backdrop-filter: blur(14px);/* adds the safary blue support */
 
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);/* adds the glow shadow effect */
 
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+    transform: scale(0.75) translateY(40px);/* starts from smaller and lower */
+    opacity: 0;/* before animation hides the box */
 
-    transform: scale(0.75) translateY(40px);
-    opacity: 0;
+    transition: all 0.4s ease;/* makes the popup animation smooth */
 
-    transition: all 0.4s ease;
-
-    position: relative;
+    position: relative;/* x button position allowed */
 }
 
 .about-overlay.active .about-box,
-.contact-overlay.active .contact-box {
-    transform: scale(1) translateY(0);
-    opacity: 1;
+.contact-overlay.active .contact-box {/* animates the active pop up */
+    transform: scale(1) translateY(0);/* returns to box to the normal size */
+    opacity: 1;/* makes the box visible  */
 }
 
 .about-box h2,
-.contact-box h2 {
-    font-size: 32px;
+.contact-box h2 {/* styles the pop up headings */
+    font-size: 32px;/* sets the heading size */
     letter-spacing: 2px;
 
-    margin-bottom: 25px;
+    margin-bottom: 25px;/* adds the space below the heading */
 
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 .about-box p,
-.contact-box p {
-    font-size: 15px;
+.contact-box p {/* styles the pop up paragraphs */
+    font-size: 16px;
     line-height: 1.8;
 
     color: rgba(255, 255, 255, 0.9);
@@ -396,7 +396,7 @@ input::placeholder {
     margin-bottom: 18px;
 }
 
-.contact-email {
+.contact-email {/* styles the contact email link */
     display: inline-block;
 
     color: white;
@@ -405,33 +405,33 @@ input::placeholder {
     font-size: 18px;
     letter-spacing: 1px;
 
-    padding: 12px 18px;
+    padding: 12px 18px;/* adds the clickable spacing */
 
     border: 1px solid rgba(255, 255, 255, 0.45);
-    border-radius: 25px;
+    border-radius: 25px;/* rounds the email button */
 
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;/* smooth hover */
 }
 
-.contact-email:hover {
+.contact-email:hover {/* styles the email hover */
     background: white;
     color: black;
 
-    transform: translateY(-3px);
+    transform: translateY(-3px);/* moves the email upward */
 }
 
-/* ANIMATED X CLOSE BUTTON */
+/* animate the x close button */
 .close-button {
-    position: absolute;
-    top: 18px;
-    right: 22px;
+    position: absolute;/* positions the inside popup box */
+    top: 19px;/* moves from the top */
+    right: 23px;/* moves from the right */
 
-    width: 42px;
-    height: 42px;
+    width: 41px;/* sets the button width */
+    height: 41px;/* sets the button height */
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;/* centers x horizontally */
+    align-items: center;/* centers the x vertically */
 
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -439,214 +439,214 @@ input::placeholder {
 
     color: white;
 
-    font-size: 30px;
-    line-height: 1;
+    font-size: 30px;/* sets the x size */
+    line-height: 1;/* keeps the x centered */
 
-    cursor: pointer;
+    cursor: pointer;/* shows the pointer cursor */
 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);/* adds the blur effect */
+    -webkit-backdrop-filter: blur(10px);/* safari blur support */
 
-    transition: all 0.35s ease;
+    transition: all 0.35s ease;/* smooth animation */
 }
 
-.close-button:hover {
-    background: white;
-    color: black;
+.close-button:hover {/* styles the x hover */
+    background: white;/* makes background white */
+    color: black;/* makes the x button black */
 
-    transform: rotate(90deg) scale(1.12);
+    transform: rotate(90deg) scale(1.12);/* rotates and enlarges the button x */
 
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.55);
 }
 
-.close-button:active {
-    transform: rotate(90deg) scale(0.95);
+.close-button:active {/* styles the x button */
+    transform: rotate(90deg) scale(0.95);/* shrinks when clicked */
 }
 
-/* MUSIC BUTTON */
-.music-button {
-    position: fixed;
-    bottom: 28px;
-    right: 28px;
+/* music button */
+.music-button {/* styles the music button */
+    position: fixed;/* keeps the button fixed on the screen */
+    bottom: 28px;/* places from the bottom */
+    right: 28px;/* places from the right */
 
     width: 48px;
     height: 48px;
 
     border: 1px solid rgba(255, 255, 255, 0.35);
-    border-radius: 50%;
+    border-radius: 50%;/* makes the button circular */
 
     background: rgba(255, 255, 255, 0.12);
     color: white;
 
-    font-size: 20px;
-    cursor: pointer;
+    font-size: 20px;/* sets the icon size */
+    cursor: pointer;/* shows the pointer cursor */
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);/* adds the blur effect  */
+    -webkit-backdrop-filter: blur(12px);/* safari blur support */
 
-    box-shadow: 0 0 22px rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 22px rgba(255, 255, 255, 0.12);/* adds shadow */
 
-    z-index: 100;
+    z-index: 100;/* keeps button above all the content */
 
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;/* smooth hover effect */
 }
 
-.music-button:hover {
-    background: white;
-    color: black;
+.music-button:hover {/* styles the music hover */
+    background: white;/* makes background white  */
+    color: black;/* makes the icon black */
 
-    transform: scale(1.1);
+    transform: scale(1.1);/* enlarges the button */
 
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.45);/* adds glow effect */
 }
 
 /* TABLET SCREEN */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {/* tablet screen styling */
 
-    .navbar {
+    .navbar {/* adjusts the navigation bar on the tablet */
         padding: 35px 40px;
     }
 
-    .logo {
+    .logo {/* adjusts the logo on the tablet */
         font-size: 34px;
     }
 
-    .nav-links {
+    .nav-links {/* adjusts the menu gap on the tablets */
         gap: 20px;
     }
 
-    .nav-links a {
+    .nav-links a {/* adjusts the meni links on the tablets */
         padding: 9px 13px;
     }
 
-    .content {
+    .content {/* adjusts the menu links */
         padding-left: 40px;
     }
 
-    .left-content h1 {
+    .left-content h1 {/* adjusts the headin gon the tablet */
         font-size: 65px;
     }
 
-    .subtitle {
+    .subtitle {/* adjusts the subtitles on the tablet */
         font-size: 22px;
     }
 
-    .footer {
+    .footer {/* adjusts the footer on the tablet */
         padding: 0 40px 30px;
     }
 
-    .collection-content {
+    .collection-content {/* adjusts the collection content on tablet */
         padding: 30px 40px 60px;
     }
 
-    .collection-title-box h1 {
+    .collection-title-box h1 {/* adjust the collection title on the tablet */
         font-size: 48px;
     }
 }
 
 /* MOBILE SCREEN */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {/* mobile screen styles */
 
     .hero {
         background-position: center;
     }
 
-    .navbar {
-        padding: 30px 25px;
+    .navbar {/* adjusts the nagivation on mobile */
+        padding: 30px 25px;/* reduces the navigation padding */
 
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column;/* stacks the logo and the links */
+        align-items: flex-start;/* aligns the items to the left */
 
-        gap: 25px;
+        gap: 26px;/* adds space between logo and menu */
     }
 
-    .logo {
+    .logo {/* adjusts logo on the mobile */
         font-size: 30px;
     }
 
-    .nav-links {
+    .nav-links {/* adjusts menu on the mobile */
         gap: 15px;
         flex-wrap: wrap;
     }
 
-    .nav-links a {
+    .nav-links a {/* adjusts the menu buttons on the mobiles */
         font-size: 12px;
         padding: 8px 12px;
     }
 
-    .content {
+    .content {/* adjust the content on the mobile */
         padding: 40px 25px;
         align-items: flex-start;
     }
 
-    .left-content {
+    .left-content {/* adjusts the left content on the mobile */
         margin-top: 60px;
     }
 
-    .left-content h1 {
+    .left-content h1 {/* adjusts the heading on the mobile */
         font-size: 48px;
     }
 
-    .subtitle {
+    .subtitle {/* adjusts the subtitles on the mobile */
         font-size: 18px;
     }
 
-    .notify-box {
-        margin-top: 70px;
+    .notify-box {/* adjusts the email box on the mobile */
+        margin-top: 70px;/* reduces the top spacing */
 
         width: 100%;
-        max-width: 330px;
+        max-width: 330px;/* limits the max width */
     }
 
-    .footer {
+    .footer {/* adjusts the footer on the mobile */
         position: absolute;
 
         padding: 0 25px 25px;
     }
 
-    .footer p {
+    .footer p {/* adjusts the footer text on mobile */
         font-size: 11px;
     }
 
-    .collection-content {
+    .collection-content {/* adjusts the collection content on mobile */
         padding: 25px 20px 50px;
     }
 
-    .collection-title-box h1 {
+    .collection-title-box h1 {/* adjusts the collection heading on mobile */
         font-size: 38px;
     }
 
-    .collection-title-box p {
+    .collection-title-box p {/* adjusts collection paragraph on mobile */
         font-size: 14px;
     }
 
-    .product-card {
+    .product-card {/* adjusts product cards on the mobile */
         border-radius: 14px;
     }
 
     .about-box,
-    .contact-box {
-        padding: 35px 25px;
+    .contact-box {/* adjusts pop up boxes on the mobile */
+        padding: 34px 25px;
     }
 
     .about-box h2,
-    .contact-box h2 {
+    .contact-box h2 {/* adjusts pop up headings on the mobiles */
         font-size: 26px;
     }
 
     .about-box p,
-    .contact-box p {
+    .contact-box p {/* adjusts pop up text on the mobile */
         font-size: 14px;
         line-height: 1.7;
     }
 
-    .music-button {
+    .music-button {/* adjusts music button on the mobiles */
         bottom: 20px;
         right: 20px;
 
         width: 44px;
         height: 44px;
 
-        font-size: 18px;
+        font-size: 18px;/* reduces the icon size */
     }
 }

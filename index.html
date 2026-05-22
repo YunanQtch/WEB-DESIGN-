@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><!--sets the language to english when starting HTML-->
+<head><!--contains the information on page and linked files-->
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--this makes the website adjust in both computer and mobile devices-->
 
     <title>XEYEOL</title>
 
-    <link rel="stylesheet" href="clothingStyle.css">
+    <link rel="stylesheet" href="clothingStyle.css"><!--this is what helps link the external CSS file-->
 </head>
 
 <body>
 
     <!-- HOME PAGE -->
-    <section class="hero">
+    <section class="hero"><!--this is the section for homepage with background image-->
 
-        <header class="navbar">
+        <header class="navbar"><!--top navigation bar-->
 
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo"><!--linking brand logo to return back to the home page-->
                 XEYEOL<span>™</span>
             </a>
 
-            <nav class="nav-links">
+            <nav class="nav-links"><!--links the navigation menu-->
                 <a href="index.html">HOME</a>
                 <a href="collection.html">COLLECTION</a>
                 <a href="#" id="aboutButton">ABOUT</a>
@@ -30,15 +30,15 @@
 
         </header>
 
-        <main class="content">
+        <main class="content"><!--content area for the homepage-->
 
-            <section class="left-content">
+            <section class="left-content"><!--contents from the left side-->
 
                 <h1>COMING SOON</h1>
 
                 <p class="subtitle">A new chapter is cooking</p>
 
-                <div class="notify-box">
+                <div class="notify-box"><!--notification box for the launch email-->
 
                     <p>NOTIFY ME WHEN WE LAUNCH</p>
 
@@ -50,13 +50,13 @@
                             placeholder="YOUR EMAIL" 
                             aria-label="Your email address"
                             required
-                        >
+                        ><!--space to input the client email for launch notification-->
 
-                        <button type="submit" class="arrow-button">→</button>
+                        <button type="submit" class="arrow-button">→</button><!--submit button for the client email-->
 
                     </form>
 
-                    <small id="message"></small>
+                    <small id="message"></small><!--small form message to appear-->
 
                 </div>
 
@@ -65,18 +65,18 @@
         </main>
 
         <footer class="footer">
-            <p>© XEYEOL. ALL RIGHTS RESERVED.</p>
+            <p>© XEYEOL. ALL RIGHTS RESERVED.</p><!--copyright text-->
         </footer>
 
     </section>
 
 
     <!-- ABOUT POP OUT BOX -->
-    <div class="about-overlay" id="aboutOverlay">
+    <div class="about-overlay" id="aboutOverlay"><!--about popup-->
 
-        <div class="about-box">
+        <div class="about-box"><!--about popup content box -->
 
-            <button class="close-button" id="closeAbout">×</button>
+            <button class="close-button" id="closeAbout">×</button><!--button closes the popup box -->
 
             <h2>ABOUT XEYEOL</h2>
 
@@ -100,7 +100,7 @@
 
 
     <!-- CONTACT POP OUT BOX -->
-    <div class="contact-overlay" id="contactOverlay">
+    <div class="contact-overlay" id="contactOverlay"><!--contact popup background overlay-->
 
         <div class="contact-box">
 
@@ -123,16 +123,16 @@
 
 
     <!-- BACKGROUND MUSIC -->
-    <audio id="backgroundMusic" loop>
-        <source src="music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+    <audio id="backgroundMusic" loop><!--background music-->
+        <source src="music.mp3" type="audio/mpeg"><!--the source file for the music-->
+        Your browser does not support the audio element.<!--popup text incase the audio is not supported-->
     </audio>
 
     <!-- MUSIC BUTTON -->
-    <button id="musicButton" class="music-button" type="button">🔇</button>
+    <button id="musicButton" class="music-button" type="button">🔇</button><!--toggle mute button-->
 
 
-    <script src="clothingScript.js"></script>
+    <script src="clothingScript.js"></script><!--links the external Javascript file-->
 
 </body>
 </html>
