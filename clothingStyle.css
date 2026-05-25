@@ -13,19 +13,19 @@ body {/* helps style the whole page body */
 
 /* Home page */
 .hero {
-    width: 100%;/* full width of the section */
-    min-height: 100vh;/* full screen height */
+    width: 100%;/* full width of the section of main page */
+    min-height: 100vh;/* full screen height of main page*/
 
-    background-image:/* background layer added */
-        linear-gradient(/* dark overlay */
-            rgba(0, 0, 0, 0.35),/* top overlay colour */
-            rgba(0, 0, 0, 0.55)/* bottom overlay colour */
+    background-image:/* background layer added for the website*/
+        linear-gradient(/* dark overall overlay */
+            rgba(0, 0, 0, 0.35),/* top part of overlay colour */
+            rgba(0, 0, 0, 0.55)/* bottom part of overlay colour */
         ),
-        url("background.png");/* adds the background image */
+        url("background.png");/* adds the background image for the website */
 
-    background-size: cover;/* screen covered by the image */
-    background-position: center;/* background image centered */
-    background-repeat: no-repeat;/* image repeating stopped */
+    background-size: cover;/* screen covered by the image on the website */
+    background-position: center;/* background image centered on the website*/
+    background-repeat: no-repeat;/* image repeating stopped for the website*/
 
     position: relative;/* absolute elements allowed inside */
     overflow: hidden;/* hides anything outside section */
